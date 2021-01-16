@@ -1,5 +1,5 @@
 import pandas as pd
-from bokeh.io import curdoc, output_notebook, output_file, show
+from bokeh.io import curdoc, output_notebook, output_file, 
 from bokeh.layouts import row, column
 from bokeh.models import Select, DataRange1d, HoverTool, ColumnDataSource, PanTool, BoxZoomTool, WheelZoomTool, ResetTool, LassoSelectTool
 from bokeh.plotting import figure
@@ -57,4 +57,3 @@ vselect.on_change('value', update_plot)
 controls = row(vselect)
 
 curdoc().add_root(row(plot, controls))
-show(plot)
